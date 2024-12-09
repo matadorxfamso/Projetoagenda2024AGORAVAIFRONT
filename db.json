@@ -1,19 +1,25 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  "agenda" : [
+    { "id"      : 1,
+    "nome"    : "Computador i7",
+    "compromisso"   : "6000.00",
+    "dia": "Eletrônicos",
+    "horario": "Eletrônicos",
+    "localizacao": "Eletrônicos"
+ },
+ { "id"      : 1,
+ "nome"    : "Computador i7",
+ "compromisso"   : "6000.00",
+ "dia": "Eletrônicos",
+ "horario": "Eletrônicos",
+ "localizacao": "Eletrônicos"
+},
+{ "id"      : 1,
+"nome"    : "Computador i7",
+"compromisso"   : "6000.00",
+"dia": "Eletrônicos",
+"horario": "Eletrônicos",
+"localizacao": "Eletrônicos"
+}
+  ]
 }
