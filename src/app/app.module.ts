@@ -7,6 +7,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { AgendaComponent } from './agenda/agenda.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { AgendaComponent } from './agenda/agenda.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

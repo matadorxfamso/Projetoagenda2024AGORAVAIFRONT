@@ -11,7 +11,7 @@ describe('AgendaComponent', () => {
       declarations: [AgendaComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(AgendaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

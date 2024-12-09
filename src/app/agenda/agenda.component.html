@@ -1,1 +1,29 @@
-<p>agenda works!</p>
+<div class="container">
+  <div class="display-5">
+    Agenda de Tarefas
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">compromisso</th>
+        <th scope="col">dia</th>
+        <th scope="col">horario</th>
+        <th scope="col">localizacao</th>
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let agenda of agendas">
+        <th scope="row">{{agenda.id}}</th>
+        <td>{{agenda.nome}}</td>
+        <td>{{agenda.compromisso}}</td>
+        <td>{{agenda.dia}}</td>
+        <td>{{agenda.horario}}</td>
+        <td>{{agenda.localizacao}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
