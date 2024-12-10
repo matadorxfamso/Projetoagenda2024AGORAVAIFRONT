@@ -6,14 +6,18 @@ import { agendas } from './agenda';
   providedIn: 'root'
 })
 export class agendasService {
+
+  url='http://localhost:8080/agenda';
+
   constructor(private http: HttpClient) { }
+
   getagendas(): Observable<agendas []>{
-    return this.http.get<agendas []>('http://localhost:3000/agenda')
+    return this.http.get<agendas []>(this.url);
   }
   delete(agenda: agendas): Observable<void>{
-    return this.http.delete<void>('http://localhost:3000/agenda/' + agenda.id)
+    return this.http.delete<void>(`${this.url}/${agenda.id}`);
   }
   save(agenda: agendas): Observable<agendas>{
-    return this.http.post<agendas>('http://localhost:3000/agenda/', agenda)
+    return this.http.post<agendas>(this.url, agenda);
   }
 }
