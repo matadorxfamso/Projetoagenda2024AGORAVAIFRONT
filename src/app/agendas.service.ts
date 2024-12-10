@@ -10,4 +10,7 @@ export class agendasService {
   getagendas(): Observable<agendas []>{
     return this.http.get<agendas []>('http://localhost:3000/agenda')
   }
+  delete(agenda: agendas): Observable<void>{
+    return this.http.delete<void>('http://localhost:3000/agenda/' + agenda.id)
+  }
 }
