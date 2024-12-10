@@ -13,4 +13,7 @@ export class agendasService {
   delete(agenda: agendas): Observable<void>{
     return this.http.delete<void>('http://localhost:3000/agenda/' + agenda.id)
   }
+  save(agenda: agendas): Observable<agendas>{
+    return this.http.post<agendas>('http://localhost:3000/agenda/', agenda)
+  }
 }

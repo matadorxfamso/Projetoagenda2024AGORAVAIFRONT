@@ -1,0 +1,26 @@
+<div class="container">
+  <h3>Cadastrar compromisso</h3>
+  <form [formGroup]="formGroupagenda">
+    <div class="mb-3">
+      <label for="name" class="form-label">nome</label>
+      <input formControlName="nome" type="text " class="form-control" id="nome" placeholder="Digite o nome">
+    </div>
+    <div class="mb-3">
+      <label for="compromisso" class="form-label">compromisso</label>
+      <input formControlName="compromisso" type="text " class="form-control" id="compromisso" placeholder="infome o compromisso">
+    </div>
+    <div class="mb-3">
+      <label for="dia" class="form-label">dia</label>
+      <input formControlName="dia" type="text " class="form-control" id="dia" placeholder="Digite o dia do compromisso">
+    </div>
+    <div class="mb-3">
+      <label for="horario" class="form-label">horario</label>
+      <input formControlName="horario" type="text " class="form-control" id="horario" placeholder="horario ">
+    </div>
+    <div class="mb-3">
+      <label for="localizacao" class="form-label">localizacao</label>
+      <input formControlName="localizacao" type="text " class="form-control" id="localizacao" placeholder="localizacao ">
+    </div>
+    <button type="button" class="btn btn-primary" (click)="save()">Criar</button>
+  </form>
+</div>
