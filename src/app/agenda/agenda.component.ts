@@ -19,6 +19,7 @@ export class AgendaComponent {
     })
   }
   delete(agendas: agendas){
+    
     this.service.delete(agendas).subscribe({
       next: ()=> this.loadagendas()
     })

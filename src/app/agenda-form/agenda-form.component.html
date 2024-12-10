@@ -3,7 +3,7 @@
   <form [formGroup]="formGroupagenda">
     <div class="mb-3">
       <label for="name" class="form-label">nome</label>
-      <input formControlName="nome" type="text " class="form-control" id="nome" placeholder="Digite o nome">
+      <input formControlName="nome" type="text " class="form-control" id="nome" placeholder="Digite o seu nome">
     </div>
     <div class="mb-3">
       <label for="compromisso" class="form-label">compromisso</label>
@@ -15,12 +15,45 @@
     </div>
     <div class="mb-3">
       <label for="horario" class="form-label">horario</label>
-      <input formControlName="horario" type="text " class="form-control" id="horario" placeholder="horario ">
+      <input formControlName="horario" type="text " class="form-control" id="horario" placeholder="Digite o horario ">
     </div>
     <div class="mb-3">
       <label for="localizacao" class="form-label">localizacao</label>
-      <input formControlName="localizacao" type="text " class="form-control" id="localizacao" placeholder="localizacao ">
+      <input formControlName="localizacao" type="text " class="form-control" id="localizacao" placeholder="Digite a localização do compromisso ">
     </div>
-    <button type="button" class="btn btn-primary" (click)="save()">Criar</button>
+    <button *ngIf="isEditing" class="action_has has_saved" aria-label="save" type="button" (click)="save()">
+      <svg
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      fill="none"
+    >
+      <path
+        d="m19,21H5c-1.1,0-2-.9-2-2V5c0-1.1.9-2,2-2h11l5,5v11c0,1.1-.9,2-2,2Z"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        data-path="box"
+      ></path>
+      <path
+        d="M7 3L7 8L15 8"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        data-path="line-top"
+      ></path>
+      <path
+        d="M17 20L17 13L7 13L7 20"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        data-path="line-bottom"
+      ></path>
+    </svg>
+    </button>
+    <button *ngIf="isEditing" class="btn btn-danger"(click)="update()">EEEEEE</button>
   </form>
 </div>

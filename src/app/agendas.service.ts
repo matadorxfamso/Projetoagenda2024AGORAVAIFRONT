@@ -14,10 +14,20 @@ export class agendasService {
   getagendas(): Observable<agendas []>{
     return this.http.get<agendas []>(this.url);
   }
+
+  getAgendasById(id:number): Observable<agendas>{
+  return this.http.get<agendas>(`${this.url}/${id}`);
+  }
+
+
   delete(agenda: agendas): Observable<void>{
     return this.http.delete<void>(`${this.url}/${agenda.id}`);
   }
   save(agenda: agendas): Observable<agendas>{
     return this.http.post<agendas>(this.url, agenda);
   }
-}
+  
+  update (agenda: agendas): Observable<agendas>{
+
+    return this.http.put<agendas>(`${this.url}/${agenda.id}`, agenda);
+}}
